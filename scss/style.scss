@@ -106,6 +106,10 @@ body{
 		text-align: center;
 		grid-row-gap: 20px;
 	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 
