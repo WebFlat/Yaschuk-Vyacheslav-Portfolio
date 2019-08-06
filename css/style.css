@@ -446,6 +446,41 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
+  .skills__wrap-prog {
+    position: relative; }
+  .skills .percentHtml,
+  .skills .percentCss,
+  .skills .percentJS,
+  .skills .percentGulp,
+  .skills .percentBootstrap,
+  .skills .percentAdaptive {
+    position: absolute;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    font-size: 5.5rem;
+    font-weight: 700; }
+  .skills #progress,
+  .skills #progress_2,
+  .skills #progress_3,
+  .skills #progress_4,
+  .skills #progress_5,
+  .skills #progress_6 {
+    -webkit-transform-origin: 115px 115px;
+    -ms-transform-origin: 115px 115px;
+    -o-transform-origin: 115px 115px;
+    transform-origin: 115px 115px;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transition: all 1.5s linear;
+    -o-transition: all 1.5s linear;
+    transition: all 1.5s linear; }
 
 .experience {
   padding-top: 50px; }

@@ -110,6 +110,30 @@ body{
 		display: flex;
 		flex-direction: column;
 	}
+	&__wrap-prog {
+		position: relative;
+	}
+	.percentHtml,
+	.percentCss,
+	.percentJS,
+	.percentGulp,
+	.percentBootstrap,
+	.percentAdaptive {
+		position: absolute;
+		@include my_pos(30%, 50%, -50%, 0);
+		font-size: 5.5rem;
+		font-weight: 700;
+	}
+	#progress,
+	#progress_2,
+	#progress_3,
+	#progress_4,
+	#progress_5,
+	#progress_6 {
+		transform-origin: 115px 115px;
+		transform: rotate(-90deg);
+		transition: all 1.5s linear;
+	}
 }
 
 
