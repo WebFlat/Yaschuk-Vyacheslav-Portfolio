@@ -32,6 +32,24 @@ $(document).ready(function() {
 	var percentNumber = document.querySelector('.percentAdaptive');
 	drowSkills();
 
-//Animate 
+//Slider************************************************************ 
+ $('.owl-carousel').owlCarousel({
+    center: true,
+    loop:true,
+    margin: 30,
+	nav: true,
+    autoHeight: true,
+    // autoplay: true,
+    responsiveClass:true,
+    responsive:{
+        0:{
+           items:1,
+            center: false 
+        },
+        1024:{
+            items:3
+        }
+    }
+});
 
 });
