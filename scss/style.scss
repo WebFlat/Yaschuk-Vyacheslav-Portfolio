@@ -101,6 +101,8 @@ body{
 		padding: 10px 6%;
 		font-size: 1.8rem;
 		background-color: $bg-blue;
+		border-bottom: 1px solid $text-white;
+		@include tr(1s);
 	&__items {
 		display: flex;
 		justify-items: center;
@@ -275,6 +277,9 @@ body{
 		font-weight: 700;
 		font-size: 4rem;
 		line-height: 4.8rem;
+		&--beetroot {
+			animation: 2s linear 0s infinite link_beetroot;
+		}
 	}
 	&__transcription {
 		padding-left: 100px;
@@ -302,6 +307,14 @@ body{
 			background-color: $text-blue-light;
 		}
 
+	}
+}
+@keyframes link_beetroot {
+	0% {
+		transform: scale(1);	
+	}
+	50% {
+		transform: scale(1.1);
 	}
 }
 
@@ -334,17 +347,19 @@ body{
 		color: $text-white;
 		padding: 10px 10px 490px 10px;
 		// height: 500px;
-		@include tr(.2s);
+		@include tr(.4s);
 		&:hover,
 		&:active,
 		&:focus {
+			background-color: rgba(0, 0, 0, .3);
 			.projects__prew {
 				transform: scale(1.02);
 			}
+
 		}
 	}
 	&__prew {
-		@include tr(.5s);
+		@include tr(.4s);
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -384,7 +399,7 @@ body{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	padding: 25px 10%;
+	padding: 25px 8%;
 	background-color: $bg-footer;
 	&__foto {
 		width: 200px;
@@ -415,7 +430,7 @@ body{
 		// justify-content: space-between;
 		text-decoration: none;
 		color:$text-dark;
-		// font-size: 1.6rem;
+		font-size: 1.6rem;
 	}
 	&__soc-icon {
 		margin-right: 20px;

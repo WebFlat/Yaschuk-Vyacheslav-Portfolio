@@ -688,7 +688,11 @@ body {
     align-items: center;
     padding: 10px 6%;
     font-size: 1.8rem;
-    background-color: #2E364F; }
+    background-color: #2E364F;
+    border-bottom: 1px solid #fff;
+    -webkit-transition: all 1s ease-in;
+    -o-transition: all 1s ease-in;
+    transition: all 1s ease-in; }
     .header .navbar__items {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -873,6 +877,10 @@ body {
     font-weight: 700;
     font-size: 4rem;
     line-height: 4.8rem; }
+    .education__organization--beetroot {
+      -webkit-animation: 2s linear 0s infinite link_beetroot;
+      -o-animation: 2s linear 0s infinite link_beetroot;
+      animation: 2s linear 0s infinite link_beetroot; }
   .education__transcription {
     padding-left: 100px;
     color: #fff; }
@@ -895,6 +903,32 @@ body {
   .education .title-block__title::after {
     background-color: #2AA1AF; }
 
+@-webkit-keyframes link_beetroot {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); } }
+
+@-o-keyframes link_beetroot {
+  0% {
+    -o-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -o-transform: scale(1.1);
+    transform: scale(1.1); } }
+
+@keyframes link_beetroot {
+  0% {
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1); } }
+
 .experience {
   padding: 50px; }
 
@@ -914,18 +948,20 @@ body {
     position: relative;
     color: #fff;
     padding: 10px 10px 490px 10px;
-    -webkit-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in; }
-    .projects__item:hover .projects__prew, .projects__item:active .projects__prew, .projects__item:focus .projects__prew {
-      -webkit-transform: scale(1.02);
-      -ms-transform: scale(1.02);
-      -o-transform: scale(1.02);
-      transform: scale(1.02); }
+    -webkit-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in; }
+    .projects__item:hover, .projects__item:active, .projects__item:focus {
+      background-color: rgba(0, 0, 0, 0.3); }
+      .projects__item:hover .projects__prew, .projects__item:active .projects__prew, .projects__item:focus .projects__prew {
+        -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -o-transform: scale(1.02);
+        transform: scale(1.02); }
   .projects__prew {
-    -webkit-transition: all 0.5s ease-in;
-    -o-transition: all 0.5s ease-in;
-    transition: all 0.5s ease-in;
+    -webkit-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
     position: absolute;
     top: 0;
     right: 0;
@@ -964,7 +1000,7 @@ body {
   flex-wrap: wrap;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  padding: 25px 10%;
+  padding: 25px 8%;
   background-color: #9ACB34; }
   .footer__foto {
     width: 200px;
@@ -1002,7 +1038,8 @@ body {
     display: -ms-flexbox;
     display: flex;
     text-decoration: none;
-    color: #000; }
+    color: #000;
+    font-size: 1.6rem; }
   .footer__soc-icon {
     margin-right: 20px; }
   .footer__socials {

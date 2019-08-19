@@ -2,10 +2,12 @@ $(document).ready(function() {
    
     
 //Animate Skills*********************************************
+
+	let startAnimateSkills = () => {
     var shape = document.getElementById('progress');
 	var percentNumber = document.querySelector('.percentHtml');
 	let drowSkills = () => {
-    var shapeLength = (shape.getTotalLength().toFixed(0))-(shape.getTotalLength().toFixed(0))*(percentNumber.getAttribute('number'))/100;
+	var shapeLength = (shape.getTotalLength().toFixed(0))-(shape.getTotalLength().toFixed(0))*(percentNumber.getAttribute('number'))/100;
     var progressShow = shape.setAttribute('stroke-dashoffset', shapeLength);
     	percentNumber.innerText = percentNumber.getAttribute('number') + '%';
 	};
@@ -32,6 +34,28 @@ $(document).ready(function() {
 	var percentNumber = document.querySelector('.percentAdaptive');
 	drowSkills();
 
+	};
+
+//Отслеживание перемещения********************************************
+	$(window).scroll(function(){
+		//skills
+		if ($(this).scrollTop() > 1000){
+			startAnimateSkills();
+		}
+		//navbar
+		if ($(this).scrollTop() > 50 && $(this).scrollTop() < 650) {
+			$(navbar).css("transform", "translateY(-100px)");
+		}
+		else {
+			$(navbar).css("transform", "translateY(0)");
+		};
+	});
+	
+	
+
+
+
+
 //Slider************************************************************ 
  $('.owl-carousel').owlCarousel({
     center: true,
@@ -39,7 +63,7 @@ $(document).ready(function() {
     margin: 30,
 	nav: true,
     autoHeight: true,
-    // autoplay: true,
+    autoplay: true,
     responsiveClass:true,
     responsive:{
         0:{
@@ -51,5 +75,8 @@ $(document).ready(function() {
         }
     }
 });
+
+
+
 
 });
