@@ -4,6 +4,7 @@
 @import './owl/_theme.default';
 @import './owl/owl.carousel';
 
+
 @mixin tr($s) {
 	transition: all ($s) ease-in;
 }
@@ -84,11 +85,6 @@ body{
 
 
 //Block Header**************************************************
-.header {
-	text-align: center;
-	padding-top: 160px;
-	position: relative;
-	height: 100vh;
 	.navbar {
 		position: fixed;
 		z-index: 2;
@@ -101,7 +97,7 @@ body{
 		padding: 10px 6%;
 		font-size: 1.8rem;
 		background-color: $bg-blue;
-		border-bottom: 1px solid $text-white;
+		border-bottom: 1px solid rgba(255, 255, 255, .3);
 		@include tr(1s);
 	&__items {
 		display: flex;
@@ -119,6 +115,13 @@ body{
 	&__link {
 		text-decoration: none;
 		color: inherit;
+		@include tr(.3s);
+		&:hover,
+		&:focus,
+		&:active {
+				color: $text-blue-light;
+				transform: scale(1.5);
+			}
 		}	
 	&__lang {
 		outline: none;
@@ -149,8 +152,51 @@ body{
 	&__subtitle {
 		color: $text-blue-light;
 		font-size: 1.6rem;
-		}		
+		}
+	&__burger-menu {
+		display: none;
+		position: relative;
+		}
+	&__checkbox {
+		position: absolute;
+		width: 25px;
+		height: 25px;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		@include my_pos();
+		}
+	&__burger-img {
+		position: relative;
+		z-index: 3;
+		@include tr(1s);
+		cursor: pointer;
+		}
+	&__burger-submenu {
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100vh;
+		padding: 10%;
+		background: rgba(46, 54, 79, .9);
+		@include tr(.7s);
+		transform: translateX(100%);
+		&--active {
+			transform: translateX(0%);	
+			}
+		}
+		
+	&__burger-items {
+		display: flex;
+		flex-direction: column;
+		}						
 	}
+
+	.header {
+		text-align: center;
+		padding-top: 160px;
+		position: relative;
+		height: 100vh;
 	&__suptitle {
 		font-size: 5.6rem;
 		line-height: 5.6rem;
@@ -173,7 +219,7 @@ body{
 		position: absolute;
 		bottom: 0;
 		width: 100%;
-		height: 220px;
+		height: 33%;
 		background: $text-blue-light url(../img/man.jpg) center no-repeat;
 		background-size: cover;
 	}
@@ -187,8 +233,8 @@ body{
 		margin-top: 40px;
 	}
 	&__title-about {
-		min-width: 20%;
-		margin-right: 15%;
+		min-width: 19%;
+		margin-right: 12%;
 		font-weight: 700;
 		font-size: 4rem;
 		line-height: 4.8rem;
@@ -451,3 +497,6 @@ body{
 	}
 
 }
+
+
+@import '_media';
