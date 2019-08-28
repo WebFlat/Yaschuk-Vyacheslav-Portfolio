@@ -8,9 +8,9 @@ $(document).ready(function() {
 		$('#burger-submenu').toggleClass('navbar__burger-submenu--active');
 		let changeBurger = () => {		
 		if ($('#burger-submenu').hasClass('navbar__burger-submenu--active')) {
-			$(this).attr("src", "../img/times.png");
+			$(this).attr("src", "./img/times.png");
 		} else {
-			$(this).attr("src", "../img/burger.png");
+			$(this).attr("src", "./img/burger.png");
 		};
 	};
 	changeBurger();
@@ -22,7 +22,7 @@ $(document).ready(function() {
 		e.preventDefault;
 		if ($('#burger-submenu').hasClass('navbar__burger-submenu--active')) {
 			$('#burger-submenu').removeClass('navbar__burger-submenu--active');
-			$('#burger-check').attr("src", "../img/burger.png");
+			$('#burger-check').attr("src", "./img/burger.png");
 		}
 	});
 
