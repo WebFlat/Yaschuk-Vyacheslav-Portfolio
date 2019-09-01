@@ -112,26 +112,28 @@ var canvas = document.createElement('canvas'),
     w = canvas.width = innerWidth,
     h = canvas.height = innerHeight,
     particles = [],
-    properties = {
-        bgColor           	: 'rgba(243, 236, 236, .9)',
-        particleColor       : 'rgba(125,115, 115, .7)',
-        particleRadius      : 3,
-        particleCount       : 70,
-        particleMaxVelocity : .6,
-        lineLength          : 180,
-        particleLife        : 8,
-    };
-	if (window.screen.width = "576px") {
-		canvas.properties = {
+	properties;
+	if ($(window).width() < 576) {
+		properties = {
 			bgColor           	: 'rgba(243, 236, 236, .9)',
         	particleColor       : 'rgba(125,115, 115, .7)',
         	particleRadius      : 3,
-        	particleCount       : 10,
+        	particleCount       : 35,
         	particleMaxVelocity : .6,
-        	lineLength          : 100,
+        	lineLength          : 150,
         	particleLife        : 8,
 		};
-	} 
+	} else {
+		 properties = {
+			bgColor           	: 'rgba(243, 236, 236, .9)',
+			particleColor       : 'rgba(125,115, 115, .7)',
+			particleRadius      : 3,
+			particleCount       : 70,
+			particleMaxVelocity : .6,
+			lineLength          : 180,
+			particleLife        : 8,
+		};
+	}
 	
 	
 
