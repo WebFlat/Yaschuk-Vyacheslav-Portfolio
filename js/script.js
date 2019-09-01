@@ -34,9 +34,9 @@ $(document).ready(function() {
     var shape = document.getElementById('progress');
 	var percentNumber = document.querySelector('.percentHtml');
 	let drowSkills = () => {
-	var shapeLength = (shape.getTotalLength().toFixed(0))-(shape.getTotalLength().toFixed(0))*(percentNumber.getAttribute('number'))/100;
+	var shapeLength = (shape.getTotalLength().toFixed(0))-(shape.getTotalLength().toFixed(0))*(percentNumber.getAttribute('data-number'))/100;
     var progressShow = shape.setAttribute('stroke-dashoffset', shapeLength);
-    	percentNumber.innerText = percentNumber.getAttribute('number') + '%';
+    	percentNumber.innerText = percentNumber.getAttribute('data-number') + '%';
 	};
 	drowSkills();
 
