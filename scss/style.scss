@@ -196,7 +196,7 @@ canvas {
 		right: 0;
 		top: 0;
 		height: 100vh;
-		padding: 10%;
+		padding: 20% 10% 0 10%;
 		background: rgba(46, 54, 79, .9);
 		@include tr(.7s);
 		transform: translateX(100%);
@@ -216,7 +216,7 @@ canvas {
 		position: relative;
 		height: 100vh;
 	&__about {
-		padding-top: 120px;
+		padding-top: 115px;
 	}
 	&__suptitle {
 		font-size: 5.6rem;
@@ -240,7 +240,7 @@ canvas {
 		position: absolute;
 		bottom: 0;
 		width: 100%;
-		height: 40%;
+		height: 40vh;
 		background: $text-blue-light url(../img/front-end-2.jpg) top no-repeat;
 		background-size: cover;
 	}
@@ -497,6 +497,11 @@ canvas {
 		margin-top: 20px;
 		text-decoration: none;
 		color: $text-dark;
+		&:hover,
+		&:focus,
+		&:active {
+			text-decoration: underline;
+		}
 	}
 	&__social {
 		display: flex;
@@ -504,6 +509,12 @@ canvas {
 		text-decoration: none;
 		color:$text-dark;
 		font-size: 1.6rem;
+		@include tr(.3s);
+		&:hover,
+		&:focus,
+		&:active {
+			text-shadow: 2px 4px 4px rgba(0,0,0,0.75);
+		}
 	}
 	&__soc-icon {
 		margin-right: 20px;

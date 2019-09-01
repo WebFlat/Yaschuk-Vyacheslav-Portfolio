@@ -7,12 +7,115 @@
 		display: block;
 	}
 }
-@media screen and (min-width: 992px) {
-
+@media screen and (max-width: 830px) {
+	.skills__items {
+		grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+	}
+	.footer {
+		&__socials {
+			margin-top: 20px;
+		}
+		&__social {
+			margin-top: 10px;
+		}	
+	}
 }
-@media screen and (min-width: 768px) { 
-
+@media screen and (max-width: 715px) { 
+	.header__title {
+		font-size: 3rem;	
+	}
+	.header__subtitle {
+		font-size: 2.5rem;
+	}
+	.header__text-about,
+	.education__transcription {
+		font-size: 2rem;
+	}
+	.header__title-about {
+		min-width: 26%;
+	}
+	.header__suptitle {
+		margin: 0 10px 30px 10px;
+	}
 }
-@media screen and (min-width: 576px) { 
-
+@media screen and (max-width: 576px) { 
+	.header__suptitle {
+		margin: 0 10px 20px 10px;
+	}
+	.header__title-about::after {
+		width: 120px;
+	}
+	.header__title-about {
+		font-size: 3rem;
+		margin-right: 5%;
+		min-width: 30%;
+	}
+	.skills__soft {
+		font-size: 2.4rem;
+	}
+	.skills__items {
+		grid-template: repeat(6, 1fr)/repeat(1, 1fr);
+		grid-gap: 35px;
+	}
+	.education__item {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.education__transcription {
+		padding: 0 10% 0 10%;
+	}
+	.education__name {
+		border: none;
+	}
+	.footer__title,
+	.footer__location {
+		font-size: 1.8rem;
+	}
+}
+@media screen and (max-width: 480px) {
+	.header__title-about::after {
+		margin: 40px auto;
+	}
+	.header__bottom {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.header__title::after {
+		margin: 20px auto;
+	}
+	.header__suptitle {
+		font-size: 4.5rem;
+	}
+	.footer__foto {
+		width: 120px;
+		height: 120px;
+		margin-right: 15px;
+	}
+	.footer {
+		padding: 25px 5%;
+	}
+	.footer__title {
+		font-size: 1.5rem;
+	}
+	.header__title {
+    	font-size: 2rem;
+	}
+	.header__subtitle {
+    	font-size: 1.7rem;
+	}
+}
+@media screen and (max-width: 414px) {
+	.header__suptitle {
+		font-size: 4rem;
+		margin: 0;
+	}
+	.header__bg {
+		height: 35vh;
+	}
+	.header__title::after {
+    	margin: 5px auto;
+	}
+	.header__about {
+    	padding-top: 95px;
+	}
 }

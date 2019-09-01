@@ -788,7 +788,7 @@ canvas {
     right: 0;
     top: 0;
     height: 100vh;
-    padding: 10%;
+    padding: 20% 10% 0 10%;
     background: rgba(46, 54, 79, 0.9);
     -webkit-transition: all 0.7s ease-in;
     -o-transition: all 0.7s ease-in;
@@ -816,7 +816,7 @@ canvas {
   position: relative;
   height: 100vh; }
   .header__about {
-    padding-top: 120px; }
+    padding-top: 115px; }
   .header__suptitle {
     font-size: 5.6rem;
     line-height: 5.6rem;
@@ -840,7 +840,7 @@ canvas {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 40%;
+    height: 40vh;
     background: #2AA1AF url(../img/front-end-2.jpg) top no-repeat;
     background-size: cover; }
   .header__bg-img {
@@ -1117,13 +1117,20 @@ canvas {
     margin-top: 20px;
     text-decoration: none;
     color: #000; }
+    .footer__location:hover, .footer__location:focus, .footer__location:active {
+      text-decoration: underline; }
   .footer__social {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     text-decoration: none;
     color: #000;
-    font-size: 1.6rem; }
+    font-size: 1.6rem;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in; }
+    .footer__social:hover, .footer__social:focus, .footer__social:active {
+      text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.75); }
   .footer__soc-icon {
     margin-right: 20px; }
   .footer__socials {
@@ -1150,3 +1157,89 @@ canvas {
     display: none; }
   .navbar__burger-menu {
     display: block; } }
+
+@media screen and (max-width: 830px) {
+  .skills__items {
+    grid-template: repeat(3, 1fr)/repeat(2, 1fr); }
+  .footer__socials {
+    margin-top: 20px; }
+  .footer__social {
+    margin-top: 10px; } }
+
+@media screen and (max-width: 715px) {
+  .header__title {
+    font-size: 3rem; }
+  .header__subtitle {
+    font-size: 2.5rem; }
+  .header__text-about,
+  .education__transcription {
+    font-size: 2rem; }
+  .header__title-about {
+    min-width: 26%; }
+  .header__suptitle {
+    margin: 0 10px 30px 10px; } }
+
+@media screen and (max-width: 576px) {
+  .header__suptitle {
+    margin: 0 10px 20px 10px; }
+  .header__title-about::after {
+    width: 120px; }
+  .header__title-about {
+    font-size: 3rem;
+    margin-right: 5%;
+    min-width: 30%; }
+  .skills__soft {
+    font-size: 2.4rem; }
+  .skills__items {
+    grid-template: repeat(6, 1fr)/repeat(1, 1fr);
+    grid-gap: 35px; }
+  .education__item {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .education__transcription {
+    padding: 0 10% 0 10%; }
+  .education__name {
+    border: none; }
+  .footer__title,
+  .footer__location {
+    font-size: 1.8rem; } }
+
+@media screen and (max-width: 480px) {
+  .header__title-about::after {
+    margin: 40px auto; }
+  .header__bottom {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .header__title::after {
+    margin: 20px auto; }
+  .header__suptitle {
+    font-size: 4.5rem; }
+  .footer__foto {
+    width: 120px;
+    height: 120px;
+    margin-right: 15px; }
+  .footer {
+    padding: 25px 5%; }
+  .footer__title {
+    font-size: 1.5rem; }
+  .header__title {
+    font-size: 2rem; }
+  .header__subtitle {
+    font-size: 1.7rem; } }
+
+@media screen and (max-width: 414px) {
+  .header__suptitle {
+    font-size: 4rem;
+    margin: 0; }
+  .header__bg {
+    height: 35vh; }
+  .header__title::after {
+    margin: 5px auto; }
+  .header__about {
+    padding-top: 95px; } }

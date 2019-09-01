@@ -114,13 +114,26 @@ var canvas = document.createElement('canvas'),
     particles = [],
     properties = {
         bgColor           	: 'rgba(243, 236, 236, .9)',
-        particleColor       : 'rgba(46, 54, 29, 1)',
+        particleColor       : 'rgba(125,115, 115, .7)',
         particleRadius      : 3,
-        particleCount       : 60,
-        particleMaxVelocity : .8,
+        particleCount       : 70,
+        particleMaxVelocity : .6,
         lineLength          : 180,
-        particleLife        : 6,
+        particleLife        : 8,
     };
+	if (window.screen.width = "576px") {
+		canvas.properties = {
+			bgColor           	: 'rgba(243, 236, 236, .9)',
+        	particleColor       : 'rgba(125,115, 115, .7)',
+        	particleRadius      : 3,
+        	particleCount       : 10,
+        	particleMaxVelocity : .6,
+        	lineLength          : 100,
+        	particleLife        : 8,
+		};
+	} 
+	
+	
 
     document.querySelector('header').appendChild(canvas);
 
@@ -179,7 +192,7 @@ var canvas = document.createElement('canvas'),
                 if(length < properties.lineLength){
                     opacity = 1-length/properties.lineLength;
                     ctx.lineWidth = '1';
-                    ctx.strokeStyle = 'rgba(46, 54, 29, '+opacity+')';
+                    ctx.strokeStyle = 'rgba(125,115, 115, '+opacity+')';
                     ctx.beginPath();
                     ctx.moveTo(x1, y1);
                     ctx.lineTo(x2, y2);
