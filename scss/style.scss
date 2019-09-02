@@ -371,7 +371,7 @@ canvas {
 		// @include border-education;
 	}
 	&__time {
-		font-size: 3.2rem;
+		font-size: 3rem;
 		line-height: 4rem;
 		margin-top: 15px;
 	}
@@ -426,7 +426,7 @@ canvas {
 		&:focus {
 			background-color: rgba(0, 0, 0, .3);
 			.projects__prew {
-				transform: scale(1.1);
+				transform: translate(-50%, -50%) scale(1.1);
 			}
 
 		}
@@ -434,8 +434,9 @@ canvas {
 	&__prew {
 		@include tr(.4s);
 		position: absolute;
-		top: 0;
-		right: 0;
+		top: 50%;
+		right: -50%;
+		transform: translate(-50%, -50%) scale(1.2);
 		z-index: -1;
 	}
 	&__name {
@@ -501,6 +502,26 @@ canvas {
 		&:focus,
 		&:active {
 			text-decoration: underline;
+			.footer__loc-icon {
+				animation: none;
+			}
+		}
+	}
+	&__loc-icon {
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+		animation:  1.5s linear 0s infinite AnimateLocation;
+	}
+	@keyframes AnimateLocation {
+		0% {
+			transform: rotateY(0);
+		}
+		50% {
+			transform: rotateY(90deg);
+		}
+		100% {
+			transform: rotateY(180deg);
 		}
 	}
 	&__social {
@@ -527,11 +548,13 @@ canvas {
 	&__title {
 		font-weight: 700;
 		font-size: 2rem;
+		margin-left: 34px;
 	}
 	&__subtitle {
 		font-size: 1.6rem;
 		line-height: 2.4rem;
 		color: $text-blue-light;
+		margin-left: 34px;
 	}
 
 }
