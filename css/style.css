@@ -856,7 +856,15 @@ canvas {
     margin-right: 12%;
     font-weight: 700;
     font-size: 4rem;
-    line-height: 4.8rem; }
+    line-height: 4.8rem;
+    -webkit-transform: translate(0, 500px);
+    -ms-transform: translate(0, 500px);
+    -o-transform: translate(0, 500px);
+    transform: translate(0, 500px);
+    opacity: 0;
+    -webkit-transition: all 0.9s ease-in;
+    -o-transition: all 0.9s ease-in;
+    transition: all 0.9s ease-in; }
     .header__title-about::after {
       content: '';
       display: block;
@@ -867,9 +875,25 @@ canvas {
       margin: 40px 0; }
   .header__text-about {
     text-align: justify;
-    line-height: 32px; }
+    line-height: 32px;
+    -webkit-transform: translate(500px, 0);
+    -ms-transform: translate(500px, 0);
+    -o-transform: translate(500px, 0);
+    transform: translate(500px, 0);
+    opacity: 0;
+    -webkit-transition: all 0.7s ease-in;
+    -o-transition: all 0.7s ease-in;
+    transition: all 0.7s ease-in; }
 
 .skills {
+  -webkit-transform: translate(0, 500px);
+  -ms-transform: translate(0, 500px);
+  -o-transform: translate(0, 500px);
+  transform: translate(0, 500px);
+  opacity: 0;
+  -webkit-transition: all 0.7s ease-in;
+  -o-transition: all 0.7s ease-in;
+  transition: all 0.7s ease-in;
   padding: 50px 0; }
   .skills__items {
     display: grid;
@@ -926,6 +950,13 @@ canvas {
     margin-top: 50px;
     font-size: 3.2rem;
     line-height: 4rem; }
+
+.active {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  opacity: 1; }
 
 .education {
   padding: 50px 0;

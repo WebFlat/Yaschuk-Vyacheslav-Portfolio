@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+ "use strict";
 
 //Show-hide burger-submenu**********************************
 	
@@ -76,6 +76,20 @@ $(document).ready(function() {
 		else {
 			$(navbar).css("transform", "translateY(0)");
 		};
+        //Text
+        if ($(this).scrollTop() > 350){
+            let text = document.getElementsByClassName("header__text-about");
+            $(text).addClass("active");
+        };
+        //title
+        if ($(this).scrollTop() > 150){
+            let title = document.getElementsByClassName("header__title-about");
+            $(title).addClass("active");
+        };
+        if ($(this).scrollTop() > 500) {
+            let skiils = document.getElementsByClassName("skills");
+            $(skills).addClass("active");
+        };
 	});
 		
 
