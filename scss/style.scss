@@ -252,6 +252,7 @@ canvas {
 		display: flex;
 		text-align: left;
 		margin-top: 40px;
+		overflow: hidden;
 	}
 	&__title-about {
 		min-width: 19%;
@@ -270,7 +271,7 @@ canvas {
 	&__text-about {
 		text-align: justify;
 		line-height: 32px;
-		transform: translate(500px, 0);
+		transform: translate(0, 500px);
 		opacity: 0;
 		@include tr(.7s);
 	}
