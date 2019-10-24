@@ -734,9 +734,16 @@ canvas {
   .navbar__lang {
     outline: none;
     border: none;
-    background-color: transparent;
+    background-color: #2E364F;
     width: 100%;
     padding-bottom: 5px;
+    cursor: pointer;
+    outline: none;
+    background-image: none; }
+  .navbar__lang-item {
+    background-color: #2E364F;
+    outline: none;
+    padding: 2px 0 2px 5px;
     cursor: pointer; }
   .navbar__lang-wrap {
     position: relative;

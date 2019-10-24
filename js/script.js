@@ -26,7 +26,18 @@ $(document).ready(function() {
 		}
 	});
 
-
+//Change lang************************************************
+       const opt = document.getElementById('lang');
+       const imageLang = document.getElementById('changeImg');
+       opt.onchange = function() {
+           if (opt.value === 'ru'){
+                window.location = 'https://webflat.github.io/Yaschuk-Vyacheslav-Portfolio/';
+                imageLang.src='../img/ru.svg';
+                console.log("ru");
+           } else {
+               imageLang.src="../img/en.svg";
+           }
+        };
 	
 //Animate Skills*********************************************
 
