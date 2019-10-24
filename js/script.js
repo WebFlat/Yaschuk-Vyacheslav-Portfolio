@@ -35,7 +35,7 @@ $(document).ready(function() {
                 imageLang.src='../img/ru.svg';
                 console.log("ru");
            }
-            else {
+            if (opt.value === 'англ'){
                window.location = 'https://webflat.github.io/Yaschuk-Vyacheslav-Portfolio/';
                imageLang.src="../img/en.svg";
                console.log("en");
