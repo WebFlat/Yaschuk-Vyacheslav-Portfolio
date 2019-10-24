@@ -753,8 +753,7 @@ canvas {
     right: 25%;
     top: 24%;
     width: 35px;
-    background-color: #2E364F;
-    z-index: -1; }
+    background-color: #2E364F; }
   .navbar__lang-icon {
     width: 20px;
     height: 20px; }
