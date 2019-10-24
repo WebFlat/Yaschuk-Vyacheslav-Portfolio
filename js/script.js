@@ -33,12 +33,12 @@ $(document).ready(function() {
         let changeLang = function() {
             let imageLang = document.getElementById('changeImg');
            if (opt.value === 'ru'){
-                window.location = 'https://webflat.github.io/Yaschuk-Vyacheslav-Portfolio/index_ru.html';
+                window.location = '../index_ru.html';
                 imageLang.src='../img/ru.svg';
                 console.log("ru");
            }
             else if (opt.value === 'en'){
-               window.location = 'https://webflat.github.io/Yaschuk-Vyacheslav-Portfolio/index.html';
+               window.location = '../index.html';
                imageLang.src="../img/en.svg";
                console.log("en");
            }

@@ -1237,7 +1237,7 @@ canvas {
     color: #2AA1AF;
     margin-left: 34px; }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1015px) {
   .navbar__menu,
   .navbar__lang-wrap {
     display: none; }
