@@ -34,11 +34,12 @@ $(document).ready(function() {
                 window.location = 'https://webflat.github.io/Yaschuk-Vyacheslav-Portfolio/index_ru.html';
                 imageLang.src='../img/ru.svg';
                 console.log("ru");
-           } else if(opt.value === 'en')
-               window.location = 'https://webflat.github.io/Yaschuk-Vyacheslav-Portfolio/index.html';
+           };
+            if (opt.value === 'en'){
+               window.location = 'https://webflat.github.io/Yaschuk-Vyacheslav-Portfolio/';
                imageLang.src="../img/en.svg";
-               console.log('en');
-           }
+               console.log("en");
+           };
         };
 	
 //Animate Skills*********************************************
