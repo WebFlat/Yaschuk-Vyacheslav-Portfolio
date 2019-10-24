@@ -31,10 +31,11 @@ $(document).ready(function() {
        const imageLang = document.getElementById('changeImg');
        opt.onchange = function() {
            if (opt.value === 'ru'){
-                window.location = 'https://webflat.github.io/Yaschuk-Vyacheslav-Portfolio/';
+                window.location = 'https://webflat.github.io/Yaschuk-Vyacheslav-Portfolio/index_ru.html';
                 imageLang.src='../img/ru.svg';
                 console.log("ru");
            } else {
+               window.location = 'https://webflat.github.io/Yaschuk-Vyacheslav-Portfolio/index.html';
                imageLang.src="../img/en.svg";
            }
         };
