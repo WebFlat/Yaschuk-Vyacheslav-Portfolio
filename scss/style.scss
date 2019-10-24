@@ -164,6 +164,7 @@ canvas {
 		top: 24%;
 		width: 35px;
 		background-color: $bg-blue;
+		z-index: -1;
 	}	
 	&__lang-icon {
 		width: 20px;
