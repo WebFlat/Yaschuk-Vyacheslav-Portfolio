@@ -34,9 +34,10 @@ $(document).ready(function() {
                 window.location = 'https://webflat.github.io/Yaschuk-Vyacheslav-Portfolio/index_ru.html';
                 imageLang.src='../img/ru.svg';
                 console.log("ru");
-           } else {
+           } else if(opt.value === 'en')
                window.location = 'https://webflat.github.io/Yaschuk-Vyacheslav-Portfolio/index.html';
                imageLang.src="../img/en.svg";
+               console.log('en');
            }
         };
 	
