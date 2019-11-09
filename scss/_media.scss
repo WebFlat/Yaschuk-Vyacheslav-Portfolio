@@ -6,6 +6,13 @@
 	.navbar__burger-menu {
 		display: block;
 	}
+	.projects__item {
+		padding: 10px 10px 450px 10px;
+	}
+	.projects__prew {
+		width: auto;
+		height: auto;
+	}
 }
 @media screen and (max-width: 830px) {
 	.skills__items {
