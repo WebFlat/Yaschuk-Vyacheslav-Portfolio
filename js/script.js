@@ -81,18 +81,19 @@ $(document).ready(function() {
 	};
 
 //Отслеживание перемещения********************************************
+    let g_top = 0;
 	$(window).scroll(function(){
 		//skills
 		if ($(this).scrollTop() > 1000){
 			startAnimateSkills();
-		}
-		//navbar
-		if ($(this).scrollTop() > 50 && $(this).scrollTop() < 1400) {
-			$(navbar).css("transform", "translateY(-100px)");
-		}
-		else {
-			$(navbar).css("transform", "translateY(0)");
 		};
+		//navbar
+        if ($(this).scrollTop() < g_top ) {
+            $(navbar).css("transform", "translateY(0)");
+            } else {
+                $(navbar).css("transform", "translateY(-100px)");
+            };
+        g_top = $(this).scrollTop();
         //Text
         if ($(this).scrollTop() > 350){
             let text = document.getElementsByClassName("header__text-about");
@@ -108,7 +109,8 @@ $(document).ready(function() {
             $(skills).addClass("active");
         };
 	});
-		
+
+
 
 
 

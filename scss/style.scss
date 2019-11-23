@@ -113,7 +113,7 @@ canvas {
 		font-size: 1.8rem;
 		background-color: $bg-blue;
 		border-bottom: 1px solid rgba(255, 255, 255, .3);
-		@include tr(1s);
+		@include tr(.5s);
 	&__items {
 		display: flex;
 		justify-items: center;
